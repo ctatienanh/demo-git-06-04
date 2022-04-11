@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>nhap canh a:</h2>
+<input type="number" id="a"></br>
+<h2>nhap canh b:</h2>
+<input type="number" id="b"></br>
+<h2>nhap canh c:</h2>
+<input type="number"  id="c">
+
+<button type="button" onclick="costamgiac()"> kiemtra</button>
+
+<script>
+    // kiem tra canh tam giac
+    function costamgiac() {
+        if( parseFloat(a.value) + parseFloat(b.value) >= parseFloat(c.value)
+           || parseFloat(b.value) + parseFloat(c.value) >= parseFloat(a.value)
+            || parseFloat(a.value) + parseFloat(b.value) >= parseFloat(b.value)){
+            alert("day la 3 canh cua tam giac");
+        }
+        else {
+            alert("day khong phai la 3 canh cua tam giac");
+        }
+    }
+</script>
+
+
+</body>
+</html>
