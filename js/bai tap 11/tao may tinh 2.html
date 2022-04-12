@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+         #cotainer > #kq{
+             width: 13em;
+             height: 3em;
+
+         }
+         #cotainer > input{
+             width: 3em;
+             height: 3em;
+             margin: 3px;
+         }
+
+
+     </style>
+
+</head>
+<body>
+<div id="cotainer"  >
+    <input id="kq" placeholder=" hien thi ket qua" size="5" > </br>
+    <input type="button" value="1" onclick="hienthi(this.value)"/>
+    <input type="button" value="2" onclick="hienthi(this.value)"/>
+    <input type="button" value="3" onclick="hienthi(this.value)"/>
+    <input type="button" value="+" onclick="hienthi(this.value)"/> </br>
+    <input type="button" value="4" onclick="hienthi(this.value)"/>
+    <input type="button" value="5" onclick="hienthi(this.value)"/>
+    <input type="button" value="6" onclick="hienthi(this.value)"/>
+    <input type="button" value="-" onclick="hienthi(this.value)"/></br>
+    <input type="button" value="7" onclick="hienthi(this.value)"/>
+    <input type="button" value="8" onclick="hienthi(this.value)"/>
+    <input type="button" value="9" onclick="hienthi(this.value)"/>
+    <input type="button" value="*" onclick="hienthi(this.value)"/></br>
+    <input type="button" value="0" onclick="hienthi(this.value)"/>
+    <input type="button" value="/" onclick="hienthi(this.value)"/>
+    <input type="button" value="=" onclick="ketqua()"/>
+    <input type="button" value="xoa" onclick="xoa()"/>
+
+</div>
+
+<script>
+    let x="";
+    function a(id){
+      return  document.getElementById(id);
+    }
+    function hienthi(num){
+        x+=num;
+        a("kq").value=x;
+    }
+    function xoa(){
+        x="";
+        a("kq").value=x;
+    }
+    function ketqua() {
+        a("kq").value=eval(a("kq").value);
+        x=a("kq").value;
+
+    }
+</script>
+
+
+</body>
+</html>
