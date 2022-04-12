@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bootstrap.bundle.js"></script>
+    <style>
+        select
+        {
+            overflow: initial;
+        }
+    </style>
+</head>
+<body>
+<h2> nhap so tien</h2>
+<input type="number" id="tien">
+
+</br>
+<h2>lua chon dong tien goc</h2>
+<select style="width: 200px"  id="c" >
+  <option value="1"> viet nam</option>
+  <option value="20" > usa</option>
+</select>
+<h2> lua chon dong tien quy doi</h2>
+<select style="width: 200px" id="d"  >
+  <option value="1">viet nam</option>
+  <option value="20" >usa</option>
+</select>
+</br></br>
+<button type="button" onclick="dt()">doi tien</button>
+
+
+<script>
+function dt(){
+    let doi = document.getElementById("tien").value;
+    let lc1 = document.getElementById("c").value;
+    let lc2 = document.getElementById("d").value;
+    tigia = lc1/lc2
+    alert("tien quy doi:" + doi*tigia  );
+}
+
+
+
+</script>
+</body>
+</html>
