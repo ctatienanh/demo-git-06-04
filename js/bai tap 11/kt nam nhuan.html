@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-left-style: double;
+        }
+    </style>
+</head>
+<body>
+<h2>Nhap nam can kiem tra:</h2>
+<input type="number" id="nam">
+<input type="button" value="kiem tra" onclick="ktnamnhuan()">
+
+
+<script>
+    function a(id){
+        return document.getElementById(id);
+    }
+ function ktnamnhuan(){
+
+        if (a("nam").value % 4==0){
+            if (a("nam").value % 100 ==0){
+                if (a("nam").value %400==0){
+                    alert( a("nam").value +"la nam nhuan" );
+                }
+                else {
+                    alert( a("nam").value + "khong phai la nam nhuan");
+                }
+            }
+            alert(a("nam").value +"la nam nhuan");
+        }
+        else {
+            alert(a("nam").value+ "khong phai la nam nhuan");
+        }
+ }
+</script>
+
+
+
+
+</body>
+</html>

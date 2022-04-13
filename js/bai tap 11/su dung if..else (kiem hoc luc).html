@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./mtbt.css">
+
+</head>
+<body>
+<h2>nhap diem</h2>
+<input type="number" id="diem" size="30px">
+<input type="button" value="kt xep hang" onclick="ktd()">
+<script >
+    function a(id){
+        return document.getElementById(id);
+    }
+    function ktd() {
+        if (a("diem").value >= 8){
+            alert("gioi");
+        }
+        else if (a("diem").value >=6.5){
+            alert("kha");
+        }
+        else if(a("diem").value >=5.5){
+            alert("trung binh");
+        }
+        else{
+            alert("kem");
+        }
+    }
+</script>
+</body>
+</html>
