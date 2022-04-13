@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <img id="image" src="quabong.jpg">
+    <p>Click button de qua bong qua trai</p>
+    <input type="button" value="trai" onclick="right()" >
+    <input type="button" value="phai" onclick="left()">
+    
+</form>
+<script>
+  let imgobj = null
+  imgobj = document.getElementById("image");
+  function init(){
+      imgobj = document.getElementById("image");
+      imgobj.style.position = "relative";
+      imgobj.style.left = "0px";
+  }
+
+  function right(){
+      imgobj.style.left = parseInt(imgobj.style.left) -110 +"px";
+  }
+
+  function left() {
+      imgobj.style.left = parseInt(imgobj.style.left) +10 +"px";
+  }
+
+  window.onload = init;
+
+</script>
+</body>
+</html>
