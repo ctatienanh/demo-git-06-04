@@ -5,19 +5,31 @@
     <title>Title</title>
 </head>
 <body>
+<h2>nhap chieu cao:</h2>
+<input type="number" size="30" id="cc">
+<h2>nhap can nang:</h2>
+<input type="number" size="30" id="cn">
+<input type="button" value="kiem tra bmi" onclick="ktbmi()">
 <script>
-    let bmi = prompt("nhap can nang","");
-    if (bmi < 18){
-        alert("underweight");
+    function a(id) {
+        return document.getElementById(id);
     }
-    else if (bmi <25){
-        alert("normal");
-    }
-    else if(bmi <30){
-        alert("overweight");
-    }
-    else {
-        alert("obese")
+    function ktbmi() {
+        let bmi;
+        bmi = a("cn").value / (a("cc").value * a("cc").value);
+        if (bmi < 18){
+            alert("underweight");
+        }
+        else if (bmi <25){
+            alert("normal");
+        }
+        else if(bmi <30){
+            alert("overweight");
+        }
+        else {
+            alert("obese")
+        }
+
     }
 
 </script>

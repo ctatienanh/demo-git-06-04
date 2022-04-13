@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="thang" >
+<input type="button" value="tinh so ngay" onclick="ktngay()">
+</br>
+<input id="kq" type="text" style="border: 0px" >
+</body>
+</html>
+
+
+<script>
+    function a(id) {
+        return document.getElementById(id);
+    }
+    function ktngay() {
+        switch (a("thang").value) {
+           case "1":
+               a("kq").value = ("31 ngay");
+               break;
+           case "2":
+               a("kq").value = ("28 hoac 29 ngay ");
+               break;
+           case  "3":
+               a("kq").value = ("31 ngay ");
+               break;
+           case  "4":
+               a("kq").value = ("30 ngay ");
+               break;
+           case  "5":
+               a("kq").value = ("31 ngay ");
+               break;
+            case  "6":
+                a("kq").value = ("30 ngay ");
+                break;
+            case  "7":
+                a("kq").value = ("31 ngay ");
+                break;
+            case  "8":
+                a("kq").value = ("31 ngay ");
+                break;
+            case  "9":
+                a("kq").value = ("30 ngay ");
+                break;
+            case  "10":
+                a("kq").value = ("31 ngay ");
+                break;
+            case  "11":
+                a("kq").value = ("30 ngay ");
+                break;
+            case  "12":
+                a("kq").value = ("31 ngay ");
+                break;
+                default:
+                    a("kq").value =   ("ko co dau do ngoc hihi ^^");
+        }
+
+    }
+</script>
