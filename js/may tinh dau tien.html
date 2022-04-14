@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+    <style>
+        p > input{
+            width: 3em;
+            height: 3em;
+            margin: 3px;
+            color: #0a58ca;
+
+        }
+
+        div{
+            border: 1px black;
+
+        }
+    </style>
+</head>
+<body>
+<table border="3px">
+<input type="number" placeholder="ket qua ra man hinh" id="kq" ></br>
+<p>
+<input type="button" value="7" onclick="hienthi(this.value)">
+<input type="button" value="8" onclick="hienthi(this.value)">
+<input type="button" value="9" onclick="hienthi(this.value)">
+<input type="button" value="+" onclick="hienthi(this.value)"></br>
+<input type="button" value="4" onclick="hienthi(this.value)">
+<input type="button" value="5" onclick="hienthi(this.value)">
+<input type="button" value="6" onclick="hienthi(this.value)">
+<input type="button" value="-" onclick="hienthi(this.value)"></br>
+<input type="button" value="1" onclick="hienthi(this.value)">
+<input type="button" value="2" onclick="hienthi(this.value)">
+<input type="button" value="3" onclick="hienthi(this.value)">
+<input type="button" value="*" onclick="hienthi(this.value)"></br>
+<input type="button" value="c">
+<input type="button" value="0" onclick="hienthi(this.value)">
+<input type="button" value="=">
+<input type="button" value="/" onclick="hienthi(this.value)">
+</p>
+</table>
+
+<script>
+    let x ="";
+    function a(id){
+        return document.getElementById(id);
+    }
+    function hienthi(num) {
+        x+=num
+        a("kq").value = x; onclick="hienthi(this.value)"
+    }
+</script>
+</body>
+</html>
