@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>nhap so tuoi can kiem tra</h2>
+<input type="number"  id="n">
+<input type="button" onclick="check()" value="kiem tra">
+</br>
+<input id="kq" style="border: none" size="30">
+<script>
+    function a(id) {
+        return document.getElementById(id);
+    }
+ function check() {
+     let b=1;
+     if (Math.floor(a("n").value) != Math.ceil(a("n").value) )
+     {
+         b =0;
+     }
+
+
+     if(b == 1)
+     {
+         if(a("n").value < 120 && a("n").value >0){
+             a("kq").value = "day la tuoi cua nguoi voi so tuoi la " + a("n").value;
+         }
+     }
+     else{
+         a("kq").value = " day khong phai tuoi cua nguoi"
+     }
+ }
+
+
+</script>
+</body>
+</html>
