@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- bai 3:-->
+<!--<h2>nhap a:</h2>-->
+<!--<input type="number" id="a1" onmouseout="timmax()">-->
+<!--<h2>nhap b:</h2>-->
+<!--<input type="number" id="b1" onmouseout="timmax()">-->
+<!--<h2>nhap c:</h2>-->
+<!--<input type="number" id="c1" onmouseout="timmax()"> </br>-->
+<!--<input id="kq" placeholder="so max:" style="border: none">-->
+<!-- bai 6:-->
+<h2>nhap doanh so ban duoc:</h2>
+<input type="number" id="ds">
+<input type="button" value="kt hoahong nhan" onclick="hoahong()">
+<input id="hh" placeholder="so hoa hong nhan duoc" style="border: none">
+
+
+</body>
+</html>
+<script>
+    function a(id){
+        return document.getElementById(id);
+    }
+    // bai:1
+    //
+    // function timmax() {
+    //     a("kq").value = +Math.max( a("a1").value , a("b1").value, a("c1").value );
+    // }
+
+     function hoahong() {
+     a("hh").value = (a("ds").value * 20)/100 ;
+     }
+</script>
