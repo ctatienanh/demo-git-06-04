@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>DoyouLoveMe</h1></br>
+<input type="button" value="Yes" id="yes" onclick="yess()">
+<input type="button" value="no" id="no" onmousemove="noo()">
+</body>
+</html>
+
+<script>
+    function a(id) {
+        return document.getElementById(id);
+    }
+    function yess(y) {
+      a("yes").value = a("yes").innerHTML = "nen vay :))"
+
+    }
+    function noo() {
+        a("no").style.marginTop = Math.random()*500 + "px";
+        a("no").style.marginLeft = Math.random()*500 + "px";
+        a("no").style.position;
+    }
+
+</script>
