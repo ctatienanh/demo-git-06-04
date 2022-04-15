@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, tr, td{
+            border: 1px solid;
+
+        }
+    </style>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+
+let s="<table  cellpadding='4' cellspacing='0'>";
+for ( let i=2; i<10 ; i++ ){
+    s += "<tr>"
+    for(let j=1; j<=10; j++){
+       s += " <td>" +i +"x" +j +"=" +(i*j) +"</td> "
+    }
+    s += "</tr>"
+}
+document.write(s + "</table>");
+
+</script>
