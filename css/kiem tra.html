@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--cau 1 : -->
+<!--c-->
+
+<h1> cau c:</h1>
+<h2>nhap do dai a:</h2>
+<input type="number" id="a">
+<h2> Chu vi cua hinh vuong canh  a:</h2>
+<h2 id="kqcv"></h2>
+
+</br><h2>Dien tich hinh vuong canh a:</h2>
+<h2 id ="kqdt"></h2> </br>
+<input type="button" value="kiem tra" onclick="dientich()">
+
+<!--cau b-->
+<h1>cau b:</h1>
+<h2>nhap a:</h2>
+<input type="number" id="a1">
+<h2>nhap b:</h2>
+<input type="number" id="b1">
+</br>
+<h2> a mu 2 la:</h2>
+<h2 id="amu2"></h2>
+<h2> a mu b la:</h2>
+<h2 id="amub"></h2>
+<input type="button" onclick="ktmu()" value="kiem tra">
+
+<!--cau c-->
+<h1>cau c:</h1>
+
+<h2> nhap a:</h2>
+<input id="a2" type="number" >
+<h2> nhap b:</h2>
+<input id="b2" type="number">
+<h2>tong cac so tu a toi b:</h2>
+<h2 id="kqt"></h2>
+<input type="button" value="kiem tra" onclick="tongab()">
+
+<!--cau d-->
+<h1> cau d</h1>
+
+<h2>nhap nam can kt:</h2>
+<input type="number" id="nam">
+<h2 id="kqtk"></h2>
+<input type="button"  value="kiem tra" onclick="kttheki()" >
+
+
+
+
+
+<!--cau e-->
+<h1>cau e:</h1>
+<h2>nhap canh a:</h2>
+<input type="number" id="a3">
+<h2>nhap canh b:</h2>
+<input type="number" id="b3">
+<h2> nhap canh c:</h2>
+<input type="number" id="c3">
+<h2 id="kqtg"></h2>
+<input type="button" value="kiem tra" onclick="kttamgiac()">
+
+
+<!--bai 2-->
+<h1> bai 2:</h1>
+<h2> 20 so chia het cho 2 va 3 tu 19 la:</h2>
+<h2 id="kq23"></h2>
+<input type="button" value="hien thi" onclick="chiahet()">
+
+<!--bai 3-->
+<h1>bai 3:</h1>
+<h2> nhap vao mot so:</h2>
+<input type="number" id="d">
+<input type="button" value="kiem tra" onclick="ktsnt()">
+</body>
+</html>
+<script>
+  function a(id) {
+    return   document.getElementById(id);
+  }
+  function dientich() {
+      let dt;
+      let cv
+      dt = a("a").value * a("a").value
+      cv = a("a").value * 4;
+      a("kqdt").innerHTML = dt;
+      a("kqcv").innerHTML = cv;
+  }
+
+  function ktmu() {
+      let a1;
+      let a2;
+      a2 = Math.pow(a("a1").value , 2);
+      a1 = Math.pow(a("a1").value , a("b1").value );
+      a("amu2").innerHTML = a2;
+      a("amub").innerHTML = a1;
+
+  }
+
+  function tongab() {
+
+     let sum=0;
+     a2 = parseInt(a("a2").value);
+     b2 = parseInt(a("b2").value);
+     for(let i=a2 ; i <= b2 ; i++)
+     {
+         sum += i;
+
+     }
+      a("kqt").innerHTML = sum;
+  }
+ function kttamgiac(){
+      a4 = a("a3").value;
+     b4 = a("b3").value;
+     c4 = a("c3").value
+
+       if ( a4==b4&& a4 ==c4 && b4 ==c4){
+          a("kqtg").innerHTML = " day la mot tam giac deu"
+      }
+      else if ( a4 == b4 || b4 ==c4 || c4 ==a4){
+         a("kqtg").innerHTML = " day la mot tam giac can"
+       }
+      else if( Math.pow((a4+b4),2) == Math.pow(c4,2) || Math.pow((a4+c4),2) == Math.pow((b4),2)  || Math.pow((b4+c4),2) == Math.pow(a4,2)){
+          a("kqtg").innerHTML = " day la mot tam giac vuong"
+      }
+      else if( a4 +b4  > c4 || b4 +c4 >a4 || a4 +c4 >b4 ){
+         a("kqtg").innerHTML = " day la mot tam giac thuong"
+     }
+      else {
+          a("kqtg").innerHTML = " 3 canh nay khong phai la canh cua mot tam giac"
+      }
+ }
+ function chiahet() {
+     let count =0;
+     let i=19;
+     while( count <20 )
+     {
+         if (i%2==0 && i%3==0){
+             document.write(+i +", ");
+             count++;
+         }
+         i++;
+     }
+ }
+
+ function ktsnt() {
+     let check =true;
+     if ( a("d").value %2 ==0){
+         document.write("chia het cho 2");
+     }
+     for (let i =2; i< a("d").value ; i++){
+         if(a("d").value %2 ==0){
+             check =false;
+         }
+     }
+      if (check == true){
+         document.write("la so nguyen to");
+     }
+     else {
+        document.write("nhap lai");
+     }
+ }
+
+ function kttheki() {
+     let namm = parseInt((a("nam").value /100 ) +1);
+     a("kqtk").innerHTML = namm;
+
+ }
+</script>
