@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button"  value="Play" onclick="playy()">
+<script>
+    let min = parseInt(prompt("min", ""));
+    let max = parseInt(prompt("max", ""));
+    let random = Math.floor(Math.random()*(max-min+1)+min);
+    function playy() {
+        let count =0;
+        let so = parseInt(prompt("so muon chon", ""));
+        while (count <3 )
+        {
+            if ( so === random){
+                alert("chuc mung ban da chon dung");
+            }
+            else {
+                alert(" ban den lam ");
+            }
+            count++;
+        }
+    }
+</script>
+</body>
+</html>

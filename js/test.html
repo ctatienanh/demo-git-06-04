@@ -4,66 +4,44 @@
   <meta charset="UTF-8">
   <title>[Bài tập] Tạo form đơn giản</title>
 
-  <style >
-    a{
-      color: blue;
-    }
-    b{
-      color: orange;
-    }
-    table{
-      background: #ff6600;
-      font-family: .VnSouthernH;
-    }
-  </style >
 
 </head>
 <body>
-<table >
-  <tr bgcolor="green">
-    <h1> <th colspan="2">SỞ THÍCH CỦA BẠN</th> </h1>
+<input type="button" value="Play!" onclick="play()" id="btn1">
+<input type="button" id="btn2" style="display:none" value="Play again!" onclick="playAgain()">
+<h1 id="result"><br></h1>
+<script>
+  let res = document.getElementById("result");
+  let btn1 = document.getElementById("btn1");
+  let btn2 = document.getElementById("btn2")
+  function play() {
+    let count = 0;
+    let min = parseInt(prompt("Min",""));
+    let max = parseInt(prompt("Max",""));
+    let rand = Math.floor(Math.random()*(max-min+1)+min);
+    while ( count < 3) {
+      let ans = parseInt(prompt("Let's guess :",""));
+      if (rand === ans) {
+        res.innerHTML = 'Congratulation !';
+        btn1.style.display = 'none';
+        btn2.style.display = 'block';
+        break;
+      } else {
+        if  (ans > rand) {
+          alert(' so nho hon')
+        } else {
+          alert(' so lon hon')
+        }
+        count+=1;
+      }
+    }
+  }
+  function playAgain() {
+    res.innerHTML="<br/>";
+    btn1.style.display = 'block';
+    btn2.style.display = 'none';
+  }
 
-  </tr><br>
-
-  <tr>
-    <td><a>Họ và tên</a> </td>
-    <td><input type="text" value=" " size="30"></td>
-
-  </tr>
-  <td><a>Email</a></td>
-  <td><input type="text" value=" " size="20"></td>
-
-  <tr>
-    <td><a>Sở thích</a></td>
-    <td>
-      <table >
-        <tr>
-          <td><input type="checkbox" name="rd"/> <b>Thể thao</b></td>
-          <td><input type="checkbox" name="rd"/> <b>Âm nhạc</b></td>
-          <td><input type="checkbox" name="rd"/> <b>Đọc sách</b></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="rd"/> <b>Lướt web</b></td>
-          <td><input type="checkbox" name="rd"/> <b>Chơi game</b></td>
-          <td><input type="checkbox" name="rd"/> <b>Điện ảnh</b></td>
-
-        </tr>
-        <br>
-        <tr>
-          <td><input type="checkbox" name="rd"/> <b>Du lịch</b></td>
-        </tr>
-
-      </table>
-    </td>
-
-  </tr>
-
-
-  <tr>
-    <td></td>
-    <td><input type="Submit" value="Gửi thông tin"> <input type="Submit" value="Nhập lại"></td>
-  </tr>
-
-</table>
+</script>
 </body>
 </html>
