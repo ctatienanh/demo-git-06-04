@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,2,4,5,6];
+    let first = 0;
+    let last = arr.length -1;
+    let b = ""
+    while ( first < last)
+    {
+      b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+      first++;
+      last--;
+    }
+    console.log(arr);
+</script>
+</body>
+</html>
