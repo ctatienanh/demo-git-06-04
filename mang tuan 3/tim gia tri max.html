@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>nhap gia tri vao mang</h2>
+<input type="number" id="new" size="30">
+<input type="button" value="add" onclick="nhap()" >
+<input type="button" value="kiem tra max" onclick="ktmax()">
+<hr/>
+<h2 id="hien thi"></h2>
+<script>
+    let x=0;
+    let arr = Array();
+    function nhap() {
+       arr[x] = document.getElementById("new").value;
+        alert("da them gia tri :" + arr[x] + " vao vi tri" +x);
+        x++
+    }
+    function ktmax() {
+        let max="";
+    for (let i=0; i< arr.length ; i++){
+        if (max < arr[i]){
+            max = arr[i];
+        }
+    }
+    alert("so lon nhat trong mang ban vua nhap la : " +max);
+    }
+</script>
+</body>
+</html>
