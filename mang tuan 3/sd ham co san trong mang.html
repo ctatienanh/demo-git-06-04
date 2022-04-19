@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+
+     console.log( myColor.join());
+
+    let num = window.prompt();
+    let str = num.toString();
+    let arr = [str[0]];
+    for (let x =1; x < str.length ; x++)
+    {
+        if ((str[x-1]%2==0)&& (str[x]%2==0)){
+            arr.push("-",str[x]);
+        }
+        else {
+            arr.push(str[x]);
+        }
+    }
+    alert(arr.join(""));
+
+
+
+</script>
 </body>
 </html>

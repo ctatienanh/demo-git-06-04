@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+  let str = prompt("nhap chuoi ");
+  let chuoi = [];
+  for (let i=0; i<str.length ; i++)
+  {
+      chuoi[i] = str[i];
+      if (chuoi[i] == str[i].toLocaleLowerCase()){
+          chuoi[i] = str[i].toLocaleUpperCase();
+          chuoi.push(chuoi[i]);
+      }
+      else if (chuoi[i]== str[i].toLocaleUpperCase()){
+          chuoi[i] = str[i].toLocaleLowerCase();
+          chuoi.push(chuoi[i]);
+      }
+      else {
+          chuoi.push(chuoi[i]);
+      }
+
+  }
+  document.write(chuoi.join(" "));
+
+
+</script>
 </body>
 </html>
