@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=0
+    let arr=[];
+    while (i<3){
+        arr[i]= parseInt(prompt("nhap 10 so nguyen vao ham arr so nguyen thu:  " +i +"=","") );
+        i++
+    }
+    let a = parseInt(prompt(" nhap 1 so :", ""));
+    let b=1;
+    for ( i=0; i< arr.length; i++){
+        if ( a == arr[i]){
+             arr[arr.length] =0
+             arr.splice(i,1);
+        }
+    }
+    alert("mang arr sau khi thay doi: " + arr);
+
+</script>
+</body>
+</html>
