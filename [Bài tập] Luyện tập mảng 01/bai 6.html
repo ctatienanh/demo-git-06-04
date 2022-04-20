@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=0
+    let arr=[];
+    while (i<10){
+        arr[i]= parseInt(prompt("nhap 10 so nguyen vao ham arr so nguyen thu:  " +i +"=","") );
+        i++
+    }
+    let a = parseInt(prompt(" nhap 1 so :", ""));
+    let b=1;
+    for ( i=0; i< arr.length; i++){
+        if ( a == arr[i]){
+            b=0
+        }
+
+    }
+     if (b==1){
+         alert(+a+ " : is in the arry");
+     }
+     else {
+         alert(+a+" : is not the arry");
+     }
+</script>
+</body>
+</html>
