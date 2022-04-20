@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=0
+    let a=[];
+    while (i<3){
+        a[i]= parseInt(prompt("nhap 10 so nguyen vao ham arr so nguyen thu:  " +i +"=","") );
+        i++
+    }
+    let j=0
+    let b =[];
+    while (j<3){
+        b[j] =parseInt(prompt("nhap 10 so nguyen vao mang b so nguyen thu:" +j + "=",""));
+        j++
+    }
+    let c=[];
+    c = a.concat(b);
+    alert(c);
+</script>
+</body>
+</html>
