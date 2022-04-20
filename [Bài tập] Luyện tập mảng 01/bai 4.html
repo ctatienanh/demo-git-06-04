@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=0
+    let arr=[];
+    while (i<10){
+        arr[i]= parseInt(prompt("nhap 10 so nguyen vao ham arr so nguyen thu:  " +i +"=","") );
+        i++
+    }
+    alert("mang trc khi sap xep: " +arr.join(" "));
+    let b ="";
+    let arr1 = arr.length-1;
+    let arr2= 0;
+     while (arr2 < arr1)
+     {
+        b = arr[arr1];
+        arr[arr2] = arr[arr1];
+        arr[arr2] = b;
+        arr2 ++;
+        arr1 --;
+
+     }
+    alert("bang sau khi sap xep :" +arr.join(" "));
+</script>
+</body>
+</html>
