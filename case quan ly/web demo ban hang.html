@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demobh.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="bk1.webp" WIDTH="100%" height="90">
+    </div>
+    <div class="menu">
+        <li><a href=""> <img src="2.jpg" width="50" height="50"> </br> LAPTOP</a>
+            <ul class="menulaptop">
+                <button style="border: 0px; background-color: white" onclick="dell()">DELL </button>
+                <br>
+                <button style="border: 0px; background-color: white" onclick="hp()">HP </button>
+                <br>
+                <button style="border: 0px; background-color: white" onclick="asus()">ASUS </button>
+            </ul>
+
+        </li>
+        <li><a href=""> <img src="smarr.jpg" width="50" height="50"> </br> ĐIỆN THOẠI</a></li>
+        <li><a href=""> <img src="dongho.jpg" width="50" height="50"> <br> ĐỒNG HỒ THÔNG MINH</a></li>
+        <li><a href=""> <img src="pk.png" width="50" height="50"> </br>  PHỤ KIỆN</a></li>
+        <li><a href=""> <img src="robott.jpg" width="50" height="50"> <br> ROBOT</a></li>
+        <li>
+            <button style="border: 0px; background-color: white" onclick="showmodal1()"><img src="giohang.jpg"
+                                                                                             width="50" height="50"
+                                                                                             style="border: 0px"> <br>
+                GIO HANG
+            </button>
+        </li>
+    </div>
+    <div class="timkiem">
+
+        <li style="display: flex">
+            <input id="check" placeholder="tim kiem" style="width: 200px ; height: 25px">
+            <button style="background-color: white " onclick="tiemkiem()"><img src="timkiem.jpg" width="20px"
+                                                                               height="20px"></button>
+        </li>
+
+        <li><input type="submit" value="DANG NHAP" onclick="showdn()">
+            <input onclick="showModal();" type="submit" value="ADD">
+        </li>
+    </div>
+</header>
+<br>
+<img src="top.png" width="100%">
+<table width="100%">
+    <tr>
+        <td><img id="imgtop" src="sl1.webp" width="100%" height="100"></td>
+        <td><img id="imgtop1" src="sl4.webp" width="100%" height="100"></td>
+
+    </tr>
+</table>
+<div id="modal_add">
+    <div class="modal_layout"></div>
+    <div class="modal_body-add">
+        <div class="content_modal_add">
+            <h1>nhap san pham</h1>
+            <input id="namesp" type="text" placeholder="Nhap ten san pham">
+            <br><br>
+            <input id="linkanh" placeholder="nhap link anh">
+            <br><br>
+            <input id="ng" placeholder="nhap gia">
+            <br>
+            <li>
+                <select id="type" onclick="chooseType()">
+                    <option value="1" id="1" onclick="chooseType()">Laptop</option>
+                    <option value="2" onclick="chooseType()">Dien Thoai</option>
+                </select>
+                <select id="lt" hidden>
+                    <option class="1">DELL</option>
+                    <option class="2">HP</option>
+                    <option class="3">ASUS</option>
+                </select>
+
+                <select id="dt" hidden>
+                    <option class="1">LG</option>
+                    <option class="2">SS</option>
+                </select>
+            </li>
+
+            <script>
+                function chooseType(){
+                    //alert(2)
+                    let type = document.getElementById("type").value;
+                    let lt = document.getElementById("lt");
+                    let dt = document.getElementById("dt");
+                    if (type == "1"){
+                        lt.hidden = false
+                        dt.hidden = true
+
+                    }
+                    if (type == "2"){
+                        dt.hidden = false
+                        lt.hidden = true
+
+                    }
+                }
+            </script>
+
+            <br>
+            <div style="display: flex">
+                <input id="add" type="submit" value="ADD" onclick="addd()" style="margin: 20px">
+                <input type="submit" value="CANCER" onclick="highmodal()" style="margin: 20px">
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div id="modal_add1">
+
+    <div class="modal_layout1"></div>
+
+    <div class="modal_body-add1">
+        <div class="content_modal_add1">
+            <div>
+                <h1><img src="giohang.jpg" width="50" height="50"> Hang da nhap</h1>
+                <input type="submit" value="THANH TOAN" onclick="shoping()">
+                <input type="submit" value="QUAY LAI" onclick="highmodal1()">
+                <table id="displayshop" style=" width: 100%" class="row">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal_add2">
+
+    <div class="modal_layout2"></div>
+
+    <div class="modal_body-add2">
+        <div class="content_modal_add2">
+            <h1 style="text-align: center">KET QUA TIM KIEM</h1>
+
+            <div id="displaycheck" style="display: flex" class="row">
+
+            </div>
+            <input type="button" value="QUAYLAI" onclick="backtk()">
+
+        </div>
+    </div>
+</div>
+
+<div id="modal_add3">
+
+    <div class="modal_layout3"></div>
+
+    <div class="modal_body-add3">
+        <div class="content_modal_add3">
+            <form>
+                <table>
+                    <tr style="text-align: center">
+                        <td colspan="2"><h1>DANG NHAP</h1></td>
+                    </tr>
+                    <tr>
+                        <td><h2> Tai Khoan:</h2></td>
+                        <td><input type="text" placeholder="nhap tai khoan"></td>
+                    </tr>
+                    <tr>
+                        <td><h2> Mat Khau:</h2></td>
+                        <td><input type="password" placeholder="mat khau"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>DANG NHAP</button>
+                        </td>
+                        <td>
+                            <button onclick="highdn()"> QUAY LAI</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div id="modal_add4">
+
+    <div class="modal_layout4"></div>
+
+    <div class="modal_body-add4">
+        <div class="content_modal_add4">
+
+            <div id="displaydell" style="display: flex" class="row">
+
+            </div>
+            <input type="button" value="QUAYLAI" onclick="back()">
+
+        </div>
+    </div>
+</div>
+<div id="modal_add5">
+
+    <div class="modal_layout5"></div>
+
+    <div class="modal_body-add5">
+        <div class="content_modal_add5">
+
+            <div id="displayHP" style="display: flex" class="row">
+
+            </div>
+            <input type="button" value="QUAYLAI" onclick="backdp()">
+
+        </div>
+    </div>
+</div>
+
+<div id="modal_add6">
+
+    <div class="modal_layout6"></div>
+
+    <div class="modal_body-add6">
+        <div class="content_modal_add6">
+
+            <div id="displayasus" style="display: flex" class="row">
+            </div>
+            <input type="button" value="QUAYLAI" onclick="backdp1()">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<table id="display" style="width: 100%; text-align: center">
+</table>
+
+</body>
+</html>
+
+<script src="qlsp.js"></script>
+
+<script src="demo%20ban%20hang.js"></script>
+<script src="dang%20nhap.js"></script>
+<script>
+    loadanh();
+    loadanh1();
+</script>

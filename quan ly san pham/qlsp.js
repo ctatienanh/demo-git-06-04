@@ -28,7 +28,6 @@ function show() {
             a+=`<td><input type="button" value="Delete" onclick="xoa(${i})"> </td>`
             a+="</tr>"
         }
-
     }
     document.getElementById("display").innerHTML = a;
 }

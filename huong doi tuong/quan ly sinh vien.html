@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        form{
+           align: center;
+        }
+     .ab{
+        
+         text-align: left;
+         margin-bottom: auto;
+     }
+     tr:nth-child(odd){
+        background: #f3ffc8;
+     }
+    </style>
+
+</head>
+<body>
+<form>
+    <table class="ab">
+        <tr   >
+            <th colspan="2" ><h2 >quan ly sinh vien</h2> <img src=""> </th>
+        </tr>
+        <tr>
+            <td>Name :</td>
+            <td><input id="namep" placeholder="Name"></td>
+        </tr>
+        <tr>
+            <td> age :</td>
+            <td><input  id="tuoi"  placeholder="tuoi"></td>
+        </tr>
+        <tr>
+            <td> Gioi tinh:</td>
+            <td><select id="gt">
+                <option> Nam</option>
+                <option> Nu</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>telephone:</td>
+            <td><input type="tel" id="dt" placeholder="so dien thoai"></td>
+        </tr>
+        <tr>
+            <td> Email :</td>
+            <td> <input id="email"  placeholder="email"></td>
+        </tr>
+    </table>
+
+    <input type="button"  value="nhap"  onclick="add()">
+    <table id="display" >
+
+    </table>
+</form>
+
+
+
+
+</body>
+</html>
+<script src="qlsv.js"></script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Nhap thong tin:</h2>
+<h3> nhap ten:</h3>
+<input type="text" id="name" >
+<h3> nhap tuoi:</h3>
+<input type="number"  id="tuoi">
+<input type="button" value="click" onclick="ttcanhan()">
+<h2 id="hienthi"></h2>
+<script>
+    class Human{
+        name;
+        age;
+        constructor(ten, tuoi) {
+            this.name = ten;
+            this.age = tuoi;
+        }
+        display(){
+            return  " ten:" +this.name + "<br>"+  " tuoi: "  + this.age;
+        }
+    }
+   function ttcanhan() {
+       let a = document.getElementById("name").value;
+       let b = document.getElementById("tuoi").value;
+       let c = new Human(a,b);
+
+       document.getElementById("hienthi").innerHTML = c.display();
+   }
+
+
+</script>
+</body>
+</html>
